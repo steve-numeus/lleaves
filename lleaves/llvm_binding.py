@@ -37,7 +37,13 @@ def _get_target_machine(fcodemodel="large", target_cpu=None, target_cpu_features
     return target_machine
 
 
-def compile_module_to_asm(module, cache_path=None, fcodemodel="large", target_cpu=None, target_cpu_features=None):
+def compile_module_to_asm(
+    module,
+    cache_path=None,
+    fcodemodel="large",
+    target_cpu=None,
+    target_cpu_features=None,
+):
     _initialize_llvm()
 
     # Create a target machine representing the host

@@ -143,7 +143,11 @@ class Model:
 
         # keep a reference to the engine to protect it from being garbage-collected
         self._execution_engine = compile_module_to_asm(
-            module, cache, fcodemodel=fcodemodel, target_cpu=target_cpu, target_cpu_features=target_cpu_features,
+            module,
+            cache,
+            fcodemodel=fcodemodel,
+            target_cpu=target_cpu,
+            target_cpu_features=target_cpu_features,
         )
 
         # Drops GIL during call, re-acquires it after
